@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalizar Compra | NEXOR STORE</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700&family=JetBrains+Mono:wght@100;400;700&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">
+            <div class="logo-wrapper">
+                <img src="logo.png" alt="NEXOR" class="logo-img" />
+            </div>
+        </a>
+        <div class="nav-right">
+            <a href="shop.html" class="nav-link">SEGUIR COMPRANDO</a>
+        </div>
+    </nav>
+
+    <main class="checkout-container">
+        <h1 class="main-title">Finalizar Compra</h1>
+        
+        <div class="checkout-grid">
+            <!-- Columna Izquierda: Formulario y Pagos -->
+            <div class="checkout-form-section">
+                
+                <div class="checkout-section">
+                    <h3 class="checkout-section-title">1. Datos de Contacto</h3>
+                    <input type="email" id="checkout-email" class="input-field" placeholder="Correo Electrónico para el recibo" required>
+                </div>
+                
+                <div class="checkout-section">
+                    <h3 class="checkout-section-title">2. Datos de Envío</h3>
+                    <div class="form-row">
+                        <input type="text" id="checkout-name" class="input-field" placeholder="Nombre Completo" required>
+                        <input type="tel" id="checkout-phone" class="input-field" placeholder="Teléfono" required>
+                    </div>
+                    <div class="form-row mt-20">
+                        <input type="text" id="checkout-address" class="input-field" placeholder="Dirección de Entrega" required>
+                    </div>
+                    <div class="form-row mt-20">
+                        <input type="text" id="checkout-city" class="input-field" placeholder="Ciudad" required>
+                        <input type="text" id="checkout-dept" class="input-field" placeholder="Departamento" required>
+                    </div>
+                </div>
+                
+                <div class="checkout-section">
+                    <h3 class="payment-section-title">3. Método de Pago</h3>
+                    
+                    <div class="payment-methods">
+                        <button type="button" class="payment-btn active" data-method="card">Tarjeta Crédito</button>
+                        <button type="button" class="payment-btn" data-method="nequi">Nequi / Daviplata</button>
+                        <button type="button" class="payment-btn" data-method="pse">PSE / Bancos</button>
+                    </div>
+
+                    <form id="checkout-form">
+                        <!-- Tarjeta -->
+                        <div id="card-details" class="payment-details active">
+                            <p class="payment-instruction">
+                                Serás redirigido a nuestra pasarela de pagos segura (Wompi/Bold) para ingresar los datos de tu tarjeta y completar la transacción.
+                            </p>
+                            <p class="secure-msg">Al hacer clic en "PAGAR AHORA", aceptas la redirección.</p>
+                        </div>
+
+                        <!-- Nequi -->
+                        <div id="nequi-details" class="payment-details">
+                            <div class="payment-instruction-center">
+                                Escanea el QR o envía el pago al número:
+                                <strong id="nequi-number-display" class="text-accent" style="font-size: 1.4rem; display:block; margin: 15px 0; color: #DA0081 !important;">305 325 2358</strong>
+                            </div>
+                            <div class="qr-container nequi-qr" style="padding: 5px; background: white;">
+                                <img id="nequi-qr-img" src="" alt="Generando QR..." style="width: 100%; height: 100%; object-fit: contain; display: block;">
+                            </div>
+                            <input type="tel" class="input-field" placeholder="Tu número de celular (Origen)" required pattern="3[0-9]{9}" title="Número de celular válido (10 dígitos empezando por 3)">
+                            <p class="secure-msg">Al hacer clic en "PAGAR AHORA", serás redirigido a WhatsApp para enviar tu comprobante.</p>
+                        </div>
+
+                        <!-- PSE / Bancos -->
+                        <div id="pse-details" class="payment-details">
+                            <p class="payment-instruction">
+                                Serás redirigido a la pasarela segura de PSE para seleccionar tu banco y finalizar la compra.
+                            </p>
+                            <p class="secure-msg">Al hacer clic en "PAGAR AHORA", aceptas la redirección.</p>
+                        </div>
+
+                        <button type="submit" id="btn-pay-now" class="btn-pay btn-add-large">PAGAR AHORA</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Columna Derecha: Resumen -->
+            <div class="checkout-summary">
+                <div class="checkout-card">
+                    <h3>Resumen del Pedido</h3>
+                    <div id="checkout-items"></div>
+                    <div class="checkout-total">
+                        <span>Total a Pagar</span>
+                        <span id="checkout-total-display">$0.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Modal de Procesamiento -->
+    <div class="auth-overlay" id="payment-modal">
+        <div class="auth-box" style="text-align: center; border-color: var(--accent);">
+            <div class="spinner"></div>
+            <h2 id="payment-title" class="modal-title">Procesando</h2>
+            <p id="payment-msg" class="modal-msg">Conectando con la pasarela segura...</p>
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>

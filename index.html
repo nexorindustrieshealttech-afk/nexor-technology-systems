@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXOR TECHNOLOGY SYSTEMS - IA, Automatización y Sistemas Inteligentes</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700&family=JetBrains+Mono:wght@100;400;700&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <canvas id="neural-canvas"></canvas>
+
+    <nav>
+        <a href="index.html" class="logo">
+            <div class="logo-wrapper">
+                <img src="logo.png" alt="NEXOR Technology Systems Logo" class="logo-img" />
+            </div>
+        </a>
+        <div class="nav-center">
+        </div>
+        <div class="nav-right">
+            <div id="nav-user-section">
+                <!-- Inyectado por JS -->
+            </div>
+            <div class="cart-btn">CART <span class="cart-badge" id="cart-count">0</span></div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="hero-pre">Soluciones de Software & Hardware Empresarial</div>
+            <h1>Ingeniería Digital <br>& Tecnología Avanzada.</h1>
+            <p>Impulsamos tu negocio con desarrollo de software a medida, sistemas ERP/CRM y automatización, mientras equipamos tu infraestructura con el hardware más potente del mercado.</p>
+            <div class="hero-cta-container">
+                <a href="shop.html" class="cta-button">EXPLORAR SOLUCIONES & TIENDA ↓</a>
+            </div>
+        </section>
+
+        <section class="category-section" id="services">
+            <div class="hero-pre section-pre">NUESTRAS LÍNEAS DE NEGOCIO</div>
+            <div class="category-grid">
+                <div class="category-card" data-category="software">
+                    <span class="category-card-tag">SOFTWARE // DEVELOPMENT</span>
+                    <a href="shop.html?category=software" class="category-title-link"><h3>Desarrollo de Software</h3></a>
+                    <p class="category-card-desc">Soluciones a medida: Sistemas empresariales (ERP, CRM, POS), plataformas web y aplicaciones móviles diseñadas para escalar.</p>
+                    <div class="mini-products-grid"></div>
+                    <a href="shop.html?category=software" class="category-view-more">Ver Catálogo →</a>
+                </div>
+
+                <div class="category-card" data-category="hardware">
+                    <span class="category-card-tag">HARDWARE // SALES</span>
+                    <a href="shop.html?category=hardware" class="category-title-link"><h3>Venta de Hardware</h3></a>
+                    <p class="category-card-desc">Comercialización de tecnología de punta: Computadores, laptops, periféricos y componentes para empresas y usuarios.</p>
+                    <div class="mini-products-grid"></div>
+                    <a href="shop.html?category=hardware" class="category-view-more">Ver Catálogo →</a>
+                </div>
+
+                <div class="category-card" data-category="infrastructure">
+                    <span class="category-card-tag">IT_SERVICES // CLOUD</span>
+                    <a href="shop.html?category=infrastructure" class="category-title-link"><h3>Infraestructura IT</h3></a>
+                    <p class="category-card-desc">Servicios especializados en la nube, seguridad informática y soporte técnico para garantizar la continuidad operativa.</p>
+                    <div class="mini-products-grid"></div>
+                    <a href="shop.html?category=infrastructure" class="category-view-more">Ver Catálogo →</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col-main">
+                <a href="index.html" class="logo footer-logo">
+                    <div class="logo-wrapper">
+                        <img src="logo.png" alt="NEXOR Technology Systems Logo" class="logo-img" />
+                    </div>
+                </a>
+            </div>
+
+            <div>
+                <h4 class="footer-heading">SUBSIDIARIAS</h4>
+                <a href="#" class="subsidiary-link">NEXOR | NEURAL</a>
+                <a href="logistics.html" class="subsidiary-link">NEXOR | LOGISTICS</a>
+                <a href="#" class="subsidiary-link">NEXOR | MEDICAL</a>
+            </div>
+
+            <div>
+                <h4 class="footer-heading">CONTACTO</h4>
+                <p class="footer-contact-info">CALI, COLOMBIA | GLOBAL OPS</p>
+                <a href="tel:+573053252358" class="contact-cta">+57 305 325 23 58</a>
+                <div class="social-links">
+                    <a href="#" class="social-btn" aria-label="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    </a>
+                    <a href="#" class="social-btn" aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    </a>
+                    <a href="#" class="social-btn" aria-label="Facebook">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <span>© 2026 NEXOR INDUSTRIES | NEURAL CORE</span>
+            <span>DATA_STATUS: SECURE_CHANNEL_ACTIVE</span>
+        </div>
+    </footer>
+
+    <!-- CART UI -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h2 class="cart-title">CARRITO</h2>
+            <button class="cart-close-btn">×</button>
+        </div>
+        <div id="cart-items" class="cart-items-wrapper"></div>
+        <div class="cart-total">
+            <div class="cart-total-row"><span>TOTAL:</span> <span id="cart-total-price">$0.00</span></div>
+            <button class="btn-checkout">PROCEDER AL PAGO</button>
+        </div>
+    </div>
+
+    <!-- AUTH MODAL -->
+    <div class="auth-overlay" id="auth-modal">
+        <div class="auth-box">
+            <button class="auth-close">×</button>
+            <div class="auth-tabs">
+                <button class="auth-tab active" data-tab="login">Iniciar Sesión</button>
+                <button class="auth-tab" data-tab="register">Registrarse</button>
+            </div>
+            <form id="login-form" class="auth-form active">
+                <input type="email" class="input-field" placeholder="EMAIL" required>
+                <input type="password" class="input-field" placeholder="PASSWORD" required>
+                <div style="text-align: right; margin-bottom: 10px;">
+                    <a href="#" id="btn-forgot-pass" style="font-size: 0.7rem; color: var(--text-dim); text-decoration: none;">¿Olvidaste tu contraseña?</a>
+                </div>
+                <button type="submit" class="btn-submit">ACCEDER</button>
+            </form>
+            <form id="register-form" class="auth-form">
+                <input type="text" class="input-field" placeholder="NOMBRE DE USUARIO" required>
+                <input type="email" class="input-field" placeholder="EMAIL" required>
+                <input type="password" class="input-field" placeholder="PASSWORD" required>
+                <button type="submit" class="btn-submit">CREAR CUENTA</button>
+            </form>
+            
+            <div class="social-login-separator" style="margin: 20px 0; border-top: 1px solid rgba(255,255,255,0.1); position: relative; text-align: center;">
+                <span style="background: var(--surface); padding: 0 10px; color: var(--text-dim); font-size: 0.7rem; position: relative; top: -10px;">O CONTINÚA CON</span>
+            </div>
+            <div class="social-buttons" style="display: flex; flex-direction: column; gap: 10px;">
+                <button id="btn-google" class="btn-submit" style="background: #fff; color: #000; margin-top: 0; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                    <svg width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg"><path d="M17.64 9.2c0-.637-.057-1.251-.164-1.84H9v3.481h4.844a4.14 4.14 0 0 1-1.796 2.716v2.259h2.908c1.702-1.567 2.684-3.875 2.684-6.615z" fill="#4285F4"/><path d="M9 18c2.43 0 4.467-.806 5.956-2.18l-2.908-2.259c-.806.54-1.837.86-3.048.86-2.344 0-4.328-1.584-5.036-3.711H.957v2.332A8.997 8.997 0 0 0 9 18z" fill="#34A853"/><path d="M3.964 10.71A5.41 5.41 0 0 1 3.682 9c0-.593.102-1.17.282-1.71V4.958H.957A8.996 8.996 0 0 0 0 9c0 1.452.348 2.827.957 4.042l3.007-2.332z" fill="#FBBC05"/><path d="M9 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.463.891 11.426 0 9 0A8.997 8.997 0 0 0 .957 4.958L3.964 7.29C4.672 5.163 6.656 3.58 9 3.58z" fill="#EA4335"/></svg>
+                    Google
+                </button>
+                <button id="btn-microsoft" class="btn-submit" style="background: #2f2f2f; color: #fff; margin-top: 0; display: flex; align-items: center; justify-content: center; gap: 10px; border: 1px solid #555;">
+                    <svg width="18" height="18" viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg"><path fill="#f35325" d="M1 1h10v10H1z"/><path fill="#81bc06" d="M12 1h10v10H12z"/><path fill="#05a6f0" d="M1 12h10v10H1z"/><path fill="#ffba08" d="M12 12h10v10H12z"/></svg>
+                    Microsoft (Hotmail/Outlook)
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- TOAST CONTAINER -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle de Producto | NEXOR STORE</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700&family=JetBrains+Mono:wght@100;400;700&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">
+            <div class="logo-wrapper">
+                <img src="logo.png" alt="NEXOR Technology Systems Logo" class="logo-img" />
+            </div>
+        </a>
+        <div class="nav-center">
+        </div>
+        <div class="nav-right">
+            <div id="nav-user-section">
+                <!-- Inyectado por JS -->
+            </div>
+            <div class="cart-btn">CART <span class="cart-badge" id="cart-count">0</span></div>
+        </div>
+    </nav>
+
+    <main class="shop-main">
+        <section class="page-section">
+            <a href="shop.html" class="back-link">← VOLVER AL CATÁLOGO</a>
+
+            <div class="product-detail-grid">
+                <!-- Columna Izquierda: Imágenes -->
+                <div class="product-detail-image">
+                    <div class="main-img" id="main-image"></div>
+                    <div class="thumbnails">
+                        <!-- Miniaturas inyectadas por JS -->
+                    </div>
+                </div>
+
+                <!-- Columna Derecha: Información -->
+                <div class="product-detail-info">
+                    <span class="detail-tag"></span>
+                    <h1 class="main-title"></h1>
+                    <span class="sku"></span>
+                    
+                    <div class="price">
+                        <span></span> <!-- El precio se inyecta aquí -->
+                    </div>
+
+                    <p class="description"></p>
+
+                    <button class="btn-add-large">AÑADIR AL CARRITO</button>
+
+                    <div class="specs-container" style="margin-top: 3rem;">
+                        <h3 class="specs-title">ESPECIFICACIONES TÉCNICAS</h3>
+                        <table class="specs-table">
+                            <!-- Especificaciones inyectadas por JS -->
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col-main">
+                <a href="index.html" class="logo footer-logo">
+                    <div class="logo-wrapper">
+                        <img src="logo.png" alt="NEXOR Technology Systems Logo" class="logo-img" />
+                    </div>
+                </a>
+            </div>
+            <div>
+                <h4 class="footer-heading">NAVEGACIÓN</h4>
+                <a href="shop.html" class="footer-link">Catálogo Hardware</a>
+                <a href="index.html#services" class="footer-link">Servicios IT</a>
+                <a href="dashboard.html" class="footer-link">Mi Cuenta</a>
+                <a href="#" class="footer-link">Soporte Técnico</a>
+            </div>
+            <div>
+                <h4 class="footer-heading">CONTACTO</h4>
+                <p class="footer-contact-info">CALI, COLOMBIA | GLOBAL OPS</p>
+                <a href="tel:+573053252358" class="contact-cta">+57 305 325 23 58</a>
+                <div class="social-links">
+                    <a href="#" class="social-btn" aria-label="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    </a>
+                    <a href="#" class="social-btn" aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    </a>
+                    <a href="#" class="social-btn" aria-label="Facebook">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 NEXOR INDUSTRIES | NEURAL CORE</span>
+            <span>DATA_STATUS: SECURE_CHANNEL_ACTIVE</span>
+        </div>
+    </footer>
+
+    <!-- CART UI -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h2 class="cart-title">CARRITO</h2>
+            <button class="cart-close-btn">×</button>
+        </div>
+        <div id="cart-items" class="cart-items-wrapper"></div>
+        <div class="cart-total">
+            <div class="cart-total-row"><span>TOTAL:</span> <span id="cart-total-price">$0.00</span></div>
+            <button class="btn-checkout">PROCEDER AL PAGO</button>
+        </div>
+    </div>
+
+    <!-- AUTH MODAL & TOAST (Requeridos por script.js) -->
+    <div class="auth-overlay" id="auth-modal">
+        <!-- El contenido se genera dinámicamente o se reutiliza la estructura base si es necesario, 
+             pero script.js espera que existan estos contenedores para evitar errores -->
+    </div>
+    <div class="toast-container" id="toast-container"></div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
